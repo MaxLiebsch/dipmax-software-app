@@ -1,0 +1,97 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "team": "Unser Team",
+    "about": "Über uns",
+    "cta": "Kontaktieren Sie uns",
+    "sr-only": "Menü"
+  },
+  "hero": {
+    "badge": "Innovative Lösungen",
+    "title": "Kompetente Softwareentwicklung für Ihr Unternehmen",
+    "description": "Unser Team von Freelancern entwickelt individuelle Softwarelösungen, die Ihr Unternehmen voranbringen und Ihre Ideen in die Tat umsetzen.",
+    "cta": "Starten Sie Ihr Projekt",
+    "viewProjects": "Unsere Projekte ansehen"
+  },
+  "about": {
+    "badge": "Über uns",
+    "title": "Wer wir sind",
+    "description": "Wir sind eine Gruppe von Freelancern, die sich auf die Entwicklung von Softwarelösungen spezialisiert haben.",
+    "mission": "Unsere Mission",
+    "vision": "Unsere Vision",
+    "values": "Unsere Werte",
+    "mission-description": "Ziel ist es, qualitativ hochwertige und innovative Softwarelösungen bereitzustellen, die es Unternehmen ermöglichen, in der digitalen Landschaft erfolgreich zu sein.",
+    "vision-description": "Wir möchten das Team sein, an das sich Unternehmen wenden können, die außergewöhnliche Softwareentwicklungsdienste suchen, die Wachstum und Erfolg fördern.",
+    "values-description": "Exzellenz, Innovation, Zusammenarbeit und Kundenzufriedenheit stehen im Mittelpunkt all unserer Aktivitäten."
+  },
+  "services": {
+    "badge": "Unsere Leistung",
+    "title": "Was wir anbieten",
+    "description": "Umfassende Softwareentwicklungsdienste, die auf Ihre spezifischen Geschäftsanforderungen zugeschnitten sind.",
+    "web-development": {
+      "title": "Web-Entwicklung",
+      "description": "Benutzerdefinierte Websites und Webanwendungen, erstellt mit modernen Technologien für optimale Leistung und Benutzererfahrung."
+    },
+    "mobile-development": {
+      "title": "Mobile Apps",
+      "description": "Native und plattformübergreifende mobile Anwendungen, die ein nahtloses Erlebnis auf allen Geräten bieten."
+    },
+    "backend-development": {
+      "title": "Backend-Systeme",
+      "description": "Robuste und skalierbare Backend-Lösungen, die Ihre Anwendungen zuverlässig und effizient unterstützen."
+    },
+    "ui-ux-design": {
+      "title": "UI/UX-Design",
+      "description": "Intuitive und ansprechende Benutzeroberflächen, die das Benutzererlebnis verbessern und die Einbindung fördern sollen."
+    },
+    "consultation": {
+      "title": "Beratung",
+      "description": "Kompetente Beratung und Anleitung, damit Sie fundierte Entscheidungen zu Ihren Softwareentwicklungsprojekten treffen können."
+    },
+    "custom-solutions": {
+      "title": "Kundenspezifische Lösungen",
+      "description": "Maßgeschneiderte Softwarelösungen, die auf Ihre individuellen geschäftlichen Herausforderungen und Anforderungen zugeschnitten sind."
+    }
+  },
+  "team": {
+    "badge": "Unser Team",
+    "title": "Lernen Sie unsere Experten kennen",
+    "description": "Ein Team erfahrener Fachleute, die Ihnen bei der Entwicklung Ihrer Softwarelösungen helfen."
+  },
+  "projects": {
+    "badge": "Unsere Projekte",
+    "title": "Ausgewählte Arbeiten",
+    "description": "Entdecken Sie unser Portfolio erfolgreicher Projekte, die für Kunden aus verschiedenen Branchen umgesetzt wurden."
+  },
+  "contact": {
+    "badge": "Kontakt",
+    "title": "Kontaktieren Sie uns",
+    "description": "Bereit, Ihr Projekt zu starten? Kontaktieren Sie uns und lassen Sie uns darüber reden, wie wir Ihre Ideen in die Tat umsetzen können.",
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "description": "Bitte füllen Sie das Formular unten aus und wir werden uns schnellstmöglich um Sie kümmern.",
+      "name": "Name",
+      "subject": "Thema",
+      "email": "Email",
+      "message": "Nachricht",
+      "placeholder": "Erzählen Sie uns von Ihrem Projekt...",
+      "send": "Senden"
+    },
+    "contactInformation": {
+      "title": "Kontaktinformationen",
+      "address": "Adresse",
+      "phone": "Telefon",
+      "email": "Email",
+      "businessHours": "Geschäftzeiten",
+      "mon-fri": "Montag - Freitag",
+      "mon-fri-hours": "09:00 - 18:00",
+      "sat": "Samstag",
+      "sat-hours": "10:00 - 16:00",
+      "sun": "Sonntag",
+      "sun-hours": "Geschlossen"
+    }
+  }
+}
