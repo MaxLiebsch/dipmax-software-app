@@ -1,22 +1,27 @@
+import { nanoid } from "nanoid";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { Link } from "../i18n/navigation";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-
 import { Card, CardContent, CardFooter } from "./ui/card";
 
 export default function ProjectCard({
+  slug,
   title,
   description,
   image,
   tags,
   collaborators,
 }: {
+  slug: string;
   title: string;
   description: string;
   image: string;
   tags: string[];
   collaborators: string[];
 }) {
+  const t = useTranslations("projects");
   return (
     <Card className="overflow-hidden">
       <div className="aspect-video w-full overflow-hidden">
@@ -33,7 +38,7 @@ export default function ProjectCard({
         <p className="mt-2 text-muted-foreground">{description}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <Badge key={tag} variant="secondary">
+            <Badge key={nanoid()} variant="secondary">
               {tag}
             </Badge>
           ))}
@@ -41,7 +46,7 @@ export default function ProjectCard({
       </CardContent>
       <CardFooter className="p-4 pt-0">
         <Button variant="outline" size="sm" className="w-full">
-          View Project
+          <Link href={`/projects/${slug}`}>{t("view")}</Link>
         </Button>
       </CardFooter>
     </Card>

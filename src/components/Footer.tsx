@@ -1,5 +1,5 @@
+import { Link } from '@/src/i18n/navigation';
 import { Code } from "lucide-react";
-import Link from "next/link";
 
 const Footer = () => {
   return (

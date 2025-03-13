@@ -1,72 +1,92 @@
 {
-    "navigation": {
-        "home": "Home",
-        "services": "Services",
-        "projects": "Projects",
-        "contact": "Contact",
-        "team": "Team",
-        "about": "About",
-        "cta": "Get in Touch",
-        "sr-only": "Menu"
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "team": "Team",
+    "about": "About",
+    "cta": "Get in Touch",
+    "sr-only": "Menu"
+  },
+  "hero": {
+    "badge": "Innovative Solutions",
+    "title": "Expert Software Development for Your Business",
+    "description": "Our team of skilled freelance developers delivers custom software solutions that drive business growth and innovation.",
+    "cta": "Start Your Project",
+    "viewProjects": "View Our Work"
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Who We Are",
+    "description": "We are a collective of passionate freelance developers dedicated to creating exceptional software solutions. With expertise across various technologies and domains, we bring your ideas to life with precision and creativity.",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "values": "Our Values",
+    "mission-description": "To deliver high-quality, innovative software solutions that empower businesses to thrive in the digital landscape.",
+    "vision-description": "To be the go-to team for businesses seeking exceptional software development services that drive growth and success.",
+    "values-description": "Excellence, innovation, collaboration, and client satisfaction are at the core of everything we do."
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "What We Offer",
+    "description": "Comprehensive software development services tailored to meet your specific business needs.",
+    "web-development": {
+      "title": "Web Development",
+      "description": "Custom websites and web applications built with modern technologies for optimal performance and user experience."
     },
-    "hero": {
-        "badge": "Innovative Solutions",
-        "title": "Expert Software Development for Your Business",
-        "description": "Our team of skilled freelance developers delivers custom software solutions that drive business growth and innovation.",
-        "cta": "Start Your Project",
-        "viewProjects": "View Our Work"
+    "mobile-development": {
+      "title": "Mobile Apps",
+      "description": "Native and cross-platform mobile applications that deliver seamless experiences across all devices."
     },
-    "about": {
-        "badge": "About Us",
-        "title": "Who We Are",
-        "description": "We are a collective of passionate freelance developers dedicated to creating exceptional software solutions. With expertise across various technologies and domains, we bring your ideas to life with precision and creativity.",
-        "mission": "Our Mission",
-        "vision": "Our Vision",
-        "values": "Our Values",
-        "mission-description": "To deliver high-quality, innovative software solutions that empower businesses to thrive in the digital landscape.",
-        "vision-description": "To be the go-to team for businesses seeking exceptional software development services that drive growth and success.",
-        "values-description": "Excellence, innovation, collaboration, and client satisfaction are at the core of everything we do."
+    "backend-development": {
+      "title": "Backend Systems",
+      "description": "Robust and scalable backend solutions that power your applications with reliability and efficiency."
     },
-    "services": {
-        "badge": "Our Services",
-        "title": "What We Offer",
-        "description": "Comprehensive software development services tailored to meet your specific business needs.",
-        "web-development": {
-            "title": "Web Development",
-            "description": "Custom websites and web applications built with modern technologies for optimal performance and user experience."
-        },
-        "mobile-development": {
-            "title": "Mobile Apps",
-            "description": "Native and cross-platform mobile applications that deliver seamless experiences across all devices."
-        },
-        "backend-development": {
-            "title": "Backend Systems",
-            "description": "Robust and scalable backend solutions that power your applications with reliability and efficiency."
-        },
-        "ui-ux-design": {
-            "title": "UI/UX Design",
-            "description": "Intuitive and engaging user interfaces designed to enhance user experience and drive engagement."
-        },
-        "consultation": {
-            "title": "Consultation",
-            "description": "Expert advice and guidance to help you make informed decisions about your software development needs."
-        },
-        "custom-solutions": {
-            "title": "Custom Solutions",
-            "description": "Tailored software solutions designed to address your unique business challenges and requirements."
-        }
+    "ui-ux-design": {
+      "title": "UI/UX Design",
+      "description": "Intuitive and engaging user interfaces designed to enhance user experience and drive engagement."
     },
-    "team": {
-        "badge": "Our Team",
-        "title": "Meet Our Experts",
-        "description": "A team of skilled professionals dedicated to delivering exceptional software solutions."
+    "consultation": {
+      "title": "Consultation",
+      "description": "Expert advice and guidance to help you make informed decisions about your software development needs."
     },
-    "projects": {
-        "badge": "Our Projects",
-        "title": "Featured Work",
-        "description": "Explore our portfolio of successful projects delivered for clients across various industries."
-    },
-    "contact": {
+    "custom-solutions": {
+      "title": "Custom Solutions",
+      "description": "Tailored software solutions designed to address your unique business challenges and requirements."
+    }
+  },
+  "team": {
+    "badge": "Our Team",
+    "title": "Meet Our Experts",
+    "description": "A team of skilled professionals dedicated to delivering exceptional software solutions.",
+    "member": {
+      "back": "Back to Team",
+      "not-found-title": "Developer not found",
+      "not-found-description": "The developer you're looking for doesn't exist or has been removed.",
+      "return-home": "Back to Home",
+      "name": "Name",
+      "social": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "twitter": "Twitter"
+      },
+      "contact": "Contact us",
+      "skills": "Skills",
+      "about": "About",
+      "projects": "Projects",
+      "projects-developed": "Projects {developer} has worked on",
+      "experience": "Experience",
+      "work-experience": "Work Experience"
+    }
+  },
+  "projects": {
+    "badge": "Our Projects",
+    "title": "Featured Work",
+    "view": "View Project",
+    "description": "Explore our portfolio of successful projects delivered for clients across various industries."
+  },
+  "contact": {
     "badge": "Contact us",
     "title": "Get In Touch",
     "description": "Ready to start your project? Reach out to us and let's discuss how we can help bring your ideas to life.",
@@ -93,5 +113,12 @@
       "sun": "Sunday",
       "sun-hours": "Closed"
     }
+  },
+  "imprint": {
+    "title": "Imprint",
+    "info": "Information according to § 5 TMG",
+    "info-description": "DipMax Export GmbH <br></br> Stubenrauchstraße 31 <br></br> 12161 Berlin",
+    "commercial": "Commercial register entry",
+    "commercial-description": "Registry Court: Berlin-Charlottenburg <br></br> Register number: HR B 242210 <br></br> TAX Number: DE352978171 <br></br> TIN Number: 29/262/32481"
   }
 }

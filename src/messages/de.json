@@ -59,11 +59,32 @@
   "team": {
     "badge": "Unser Team",
     "title": "Lernen Sie unsere Experten kennen",
-    "description": "Ein Team erfahrener Fachleute, die Ihnen bei der Entwicklung Ihrer Softwarelösungen helfen."
+    "description": "Ein Team erfahrener Fachleute, die Ihnen bei der Entwicklung Ihrer Softwarelösungen helfen.",
+    "member": {
+      "back": "Zurück zu Team",
+      "not-found-title": "Person nicht gefunden",
+      "not-found-description": "Die gesuchte Person existiert nicht oder wurde entfernt.",
+      "return-home": "Zurück zur Startseite",
+      "name": "Name",
+      "social": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "twitter": "Twitter"
+      },
+      "contact": "Kontaktieren Sie uns",
+      "skills": "Fähigkeiten",
+      "about": "Über mich",
+      "projects": "Projekte",
+      "projects-developed": "An diesen Projekten hat {developer} gearbeitet",
+      "experience": "Erfahrung",
+      "work-experience": "Berufliche Erfahrung"
+    }
+
   },
   "projects": {
     "badge": "Unsere Projekte",
     "title": "Ausgewählte Arbeiten",
+    "view": "Projekt ansehen",
     "description": "Entdecken Sie unser Portfolio erfolgreicher Projekte, die für Kunden aus verschiedenen Branchen umgesetzt wurden."
   },
   "contact": {
@@ -93,5 +114,12 @@
       "sun": "Sonntag",
       "sun-hours": "Geschlossen"
     }
+  },
+  "imprint": {
+    "title": "Impressum",
+    "info": "Informationen nach § 5 TMG",
+    "info-description": "DipMax Export GmbH <br></br> Stubenrauchstraße 31 <br></br> 12161 Berlin",
+    "commercial": "Handelsregister",
+    "commercial-description": "Registergericht: Berlin-Charlottenburg <br></br> Registernummer: HR B 242210 <br></br> Steuernummer: DE352978171 <br></br> TIN-Nummer: 29/262/32481"
   }
 }

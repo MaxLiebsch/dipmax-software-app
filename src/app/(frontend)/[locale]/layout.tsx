@@ -1,3 +1,5 @@
+import Footer from "@/src/components/Footer";
+import NavBar from "@/src/components/NavBar";
 import { routing } from "@/src/i18n/routing";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
@@ -25,12 +27,18 @@ export default async function RootLayout({
 
   // Providing all messages to the client
   // side is the easiest way to get started
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale}>
       <NextIntlClientProvider messages={messages}>
-        <body>{children}</body>
+        <body>
+          {/* Navbar */}
+          <NavBar />
+          {children}
+          {/* Footer */}
+          <Footer />
+        </body>
       </NextIntlClientProvider>
     </html>
   );

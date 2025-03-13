@@ -1,12 +1,13 @@
 import { useTranslations } from "next-intl";
+import Imprint from "../Imprint";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from "../ui/card";
 
 const Contact = () => {
@@ -31,8 +32,7 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle>{t("form.title")}</CardTitle>
                 <CardDescription>
-                  Fill out the form below and we'll get back to you as soon as
-                  possible.
+                  {t("form.description")}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -194,6 +194,7 @@ const Contact = () => {
                 </div>
               </CardContent>
             </Card>
+            <Imprint />
           </div>
         </div>
       </div>

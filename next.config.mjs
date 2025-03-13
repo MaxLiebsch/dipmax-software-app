@@ -1,4 +1,5 @@
 let userConfig = undefined
+import { withPayload } from '@payloadcms/next/withPayload';
 import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin();
 try {
@@ -19,6 +20,7 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
+    reactCompiler:false,
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
@@ -47,4 +49,4 @@ function mergeConfig(nextConfig, userConfig) {
   }
 }
 
-export default withNextIntl(nextConfig)
+export default withNextIntl(withPayload(nextConfig))

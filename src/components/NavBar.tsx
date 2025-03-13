@@ -1,6 +1,6 @@
 import { Code } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "../i18n/navigation";
 import { Button } from "./ui/button";
 
 const NavBar = () => {
@@ -13,24 +13,24 @@ const NavBar = () => {
             <span>DipMax Software</span>
           </Link>
           <nav className="hidden md:flex gap-6">
-            <Link href="#about" className="text-sm font-medium hover:text-primary">
+            <Link href="/#about" className="text-sm font-medium hover:text-primary">
                 {t("about")}
             </Link>
-            <Link href="#services" className="text-sm font-medium hover:text-primary">
+            <Link href="/#services" className="text-sm font-medium hover:text-primary">
               {t("services")}
             </Link>
-            <Link href="#team" className="text-sm font-medium hover:text-primary">
+            <Link href="/#team" className="text-sm font-medium hover:text-primary">
               {t("team")}
             </Link>
-            <Link href="#projects" className="text-sm font-medium hover:text-primary">
+            <Link href="/#projects" className="text-sm font-medium hover:text-primary">
               {t("projects")}
             </Link>
-            <Link href="#contact" className="text-sm font-medium hover:text-primary">
+            <Link href="/#contact" className="text-sm font-medium hover:text-primary">
               {t("contact")}
             </Link>
           </nav>
           <Button asChild className="hidden md:inline-flex">
-            <Link href="#contact">{t("cta")}</Link>
+            <Link href="/#contact">{t("cta")}</Link>
           </Button>
           <Button variant="ghost" size="icon" className="md:hidden">
             <span className="sr-only">{t("sr-only")}</span>
