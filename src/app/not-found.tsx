@@ -1,4 +1,4 @@
-import { Link } from '@/src/i18n/navigation'
+import Link from 'next/link'
  
 export default function NotFound() {
   return (

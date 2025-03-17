@@ -75,6 +75,7 @@
       "skills": "Fähigkeiten",
       "about": "Über mich",
       "projects": "Projekte",
+      "education": "Ausbildung",  
       "projects-developed": "An diesen Projekten hat {developer} gearbeitet",
       "experience": "Erfahrung",
       "work-experience": "Berufliche Erfahrung"
@@ -121,5 +122,9 @@
     "info-description": "DipMax Export GmbH <br></br> Stubenrauchstraße 31 <br></br> 12161 Berlin",
     "commercial": "Handelsregister",
     "commercial-description": "Registergericht: Berlin-Charlottenburg <br></br> Registernummer: HR B 242210 <br></br> Steuernummer: DE352978171 <br></br> TIN-Nummer: 29/262/32481"
+  },
+  "notFound": {
+    "title": "404 - Seite nicht gefunden",
+    "description": "Entschuldigung, wir konnten die Seite nicht finden, die Sie suchen."
   }
 }
