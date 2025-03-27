@@ -87,6 +87,27 @@
     "title": "Ausgewählte Arbeiten",
     "view": "Projekt ansehen",
     "description": "Entdecken Sie unser Portfolio erfolgreicher Projekte, die für Kunden aus verschiedenen Branchen umgesetzt wurden."
+    ,"project": {
+      "not-found-title": "Projekt nicht gefunden",
+      "not-found-description": "Das Projekt, das Sie suchen, existiert nicht oder wurde entfernt.",
+      "return-home": "Zurück zu Projekten",
+      "overview": "Übersicht",
+      "features": "Features",
+      "gallery": "Galerie",
+      "client": "Kunde",
+      "technologies": "Technologien",
+      "technologies-title": "Verwendete Technologien",
+      "interested-in-project": "Interessiert an diesem Projekt?",
+      "features-title": "Schlüsselmerkmale",
+      "testimonial": "Testimonial",
+      "team": "Projektteam",
+      "links": "Links",
+      "contact-us": "Kontaktieren Sie uns",
+      "live-site": "Live-Site ansehen",
+      "repo": "Repository ansehen",
+      "request-similar-project": "Ähnliches Projekt anfragen",
+      "interested-in-project-description": "Lassen Sie uns darüber reden, wie wir eine ähnliche Lösung anpassen können, um Ihre spezifischen Bedürfnisse zu erfüllen."
+    }
   },
   "contact": {
     "badge": "Kontakt",
@@ -100,7 +121,9 @@
       "email": "Email",
       "message": "Nachricht",
       "placeholder": "Erzählen Sie uns von Ihrem Projekt...",
-      "send": "Senden"
+      "send": "Senden",
+      "success": "Nachricht erfolgreich gesendet. Wir werden uns schnellstmöglich um Sie kümmern.",
+      "failed": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
     },
     "contactInformation": {
       "title": "Kontaktinformationen",

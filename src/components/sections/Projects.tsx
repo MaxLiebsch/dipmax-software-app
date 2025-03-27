@@ -1,11 +1,14 @@
-import { projects } from "@/src/app/(frontend)/[locale]/projects/[id]/page";
+import { ProjectWrapper } from "@/src/types/Projects";
 import { useTranslations } from "next-intl";
 import ProjectCard from "../ProjectCard";
 import { Badge } from "../ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
-const Projects = () => {
+const Projects = ({projects}: {projects: ProjectWrapper}) => {
   const t = useTranslations("projects");
+  const backend = projects.docs.filter((project: any) => project.type === "backend");
+  const mobile = projects.docs.filter((project: any) => project.type === "mobile");
+  const web = projects.docs.filter((project: any) => project.type === "web");
   return (
     <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
@@ -23,74 +26,54 @@ const Projects = () => {
         <Tabs defaultValue="all" className="mt-8">
           <div className="flex justify-center">
             <TabsList>
-              <TabsTrigger value="all">All</TabsTrigger>
-              <TabsTrigger value="web">Web</TabsTrigger>
-              <TabsTrigger value="mobile">Mobile</TabsTrigger>
-              <TabsTrigger value="backend">Backend</TabsTrigger>
+              {projects.docs.length > 0 && <TabsTrigger value="all">All</TabsTrigger>}
+              {web.length > 0 && <TabsTrigger value="web">Web</TabsTrigger>}
+              {mobile.length > 0 && <TabsTrigger value="mobile">Mobile</TabsTrigger>}
+              {backend.length > 0 && <TabsTrigger value="backend">Backend</TabsTrigger>}
             </TabsList>
           </div>
           <TabsContent value="all" className="mt-8">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {Object.entries(projects).map(([key, value]) => (
+              {Object.entries(projects.docs).map(([key, value]) => (
                 <ProjectCard
                   key={key + "all"}
-                  slug={key}
-                  title={value.title}
-                  description={value.description}
-                  image={value.images[0]}
-                  tags={value.technologies}
-                  collaborators={value.team.map((member) => member.name)}
+                  project={value}
                 />
               ))}
             </div>
           </TabsContent>
           <TabsContent value="web" className="mt-8">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {Object.entries(projects)
+              {Object.entries(web)
                 .filter(([key, value]) => value.type === "web")
                 .map(([key, value]) => (
                   <ProjectCard
                     key={key + "web"}
-                    slug={key}
-                    title={value.title}
-                    description={value.description}
-                    image={value.images[0]}
-                    tags={value.technologies}
-                    collaborators={value.team.map((member) => member.name)}
+                    project={value}
                   />
                 ))}
             </div>
           </TabsContent>
           <TabsContent value="mobile" className="mt-8">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {Object.entries(projects)
+              {Object.entries(mobile)
                 .filter(([key, value]) => value.type === "mobile")
                 .map(([key, value]) => (
                   <ProjectCard
                     key={key + "mobile"}
-                    slug={key}
-                    title={value.title}
-                    description={value.description}
-                    image={value.images[0]}
-                    tags={value.technologies}
-                    collaborators={value.team.map((member) => member.name)}
+                    project={value}
                   />
                 ))}
             </div>
           </TabsContent>
           <TabsContent value="backend" className="mt-8">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {Object.entries(projects)
+              {Object.entries(backend)
                 .filter(([key, value]) => value.type === "backend")
                 .map(([key, value]) => (
                   <ProjectCard
                     key={key + "backend"}
-                    slug={key}
-                    title={value.title}
-                    description={value.description}
-                    image={value.images[0]}
-                    tags={value.technologies}
-                    collaborators={value.team.map((member) => member.name)}
+                    project={value}
                   />
                 ))}
             </div>
