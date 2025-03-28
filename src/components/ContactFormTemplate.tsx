@@ -12,7 +12,7 @@ interface ContactFormTemplateProps {
 const ContactFormTemplate = ({ name, email, subject, message }: ContactFormTemplateProps) => {
   return (
     <div>
-        <h1>ContactFormRequest</h1>
+        <h1>Contact Form Request</h1>
         <p>Name: {name}</p>
         <p>Email: {email}</p>
         <p>Subject: {subject}</p>

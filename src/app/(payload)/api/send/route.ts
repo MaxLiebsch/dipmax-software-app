@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   const { name, email, subject, message } = await req.json();
   try {
     const { data, error } = await resend.emails.send({
-      from: "Acme <info@dipmax-software.org>",
+      from: "DipMax Software <info@dipmax-software.org>",
       to: ["info@dipmax-software.org"],
       subject: `Contact Form Request - ${subject}`,
       react: ContactFormTemplate({ name, email, subject, message }),
