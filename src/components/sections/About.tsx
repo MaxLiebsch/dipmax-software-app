@@ -20,11 +20,11 @@ const About = () => {
         </div>
         <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
           <Image
-            src="/placeholder.svg?height=400&width=400"
+            src="/images/mission.jpg?height=400&width=400"
             width={400}
             height={400}
             alt="About Us"
-            className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full"
+            className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full opacity-60"
           />
           <div className="flex flex-col justify-center space-y-4">
             <ul className="grid gap-6">

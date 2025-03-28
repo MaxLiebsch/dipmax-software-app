@@ -34,7 +34,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center justify-center">
             <Image
-              src="/placeholder.svg?height=550&width=550"
+              src="/images/hero.webp"
               width={550}
               height={550}
               alt="Hero Image"
