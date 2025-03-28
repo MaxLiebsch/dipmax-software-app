@@ -11,6 +11,9 @@ export default buildConfig({
   collections: [
     {
       slug: 'developers',
+      access: {
+        read: () => true, // Allow read access to everyone
+      },
       fields: [
         {
           name: 'active',
@@ -165,6 +168,9 @@ export default buildConfig({
     },
     {
       slug: 'projects',
+      access: {
+        read: () => true, // Allow read access to everyone
+      },
       fields: [
         {
           name: 'slug',
@@ -312,6 +318,9 @@ export default buildConfig({
     },
     {
       slug: 'media',
+      access: {
+        read: () => true, // Allow read access to everyone
+      },
       upload: {
         staticDir: 'media',
         mimeTypes: ['image/*'],
