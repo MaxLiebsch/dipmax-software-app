@@ -1,4 +1,4 @@
-import { Link } from '@/src/i18n/navigation';
+import { Link } from "@/src/i18n/navigation";
 import { Code } from "lucide-react";
 
 const Footer = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex gap-4">
-          <Link
+          {/* <Link
             href="#"
             className="text-muted-foreground hover:text-foreground"
           >
@@ -99,7 +99,7 @@ const Footer = () => {
               <circle cx="4" cy="4" r="2" />
             </svg>
             <span className="sr-only">LinkedIn</span>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </footer>
