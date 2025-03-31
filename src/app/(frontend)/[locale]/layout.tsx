@@ -4,8 +4,8 @@ import { routing } from "@/src/i18n/routing";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import Head from "next/head";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -32,9 +32,6 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <Head>
-        <script async src="https://dipmax-software.org/proxy.js"></script>
-      </Head>
       <NextIntlClientProvider messages={messages}>
         <body>
           {/* Navbar */}
@@ -46,6 +43,7 @@ export default async function RootLayout({
           </div>
         </body>
       </NextIntlClientProvider>
+      <Script async src="https://dipmax-software.org/proxy.js" />
     </html>
   );
 }
