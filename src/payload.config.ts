@@ -10,7 +10,16 @@ import { Project } from "./payload/collections/project";
 export default buildConfig({
   // If you'd like to use Rich Text, pass your editor here
   editor: lexicalEditor(),
-
+  admin: {
+    livePreview: {
+      url: ({ data, req, collectionConfig, locale }) => {
+        const id = collectionConfig?.slug === "developers" ? data.slug : data.id;
+        console.log(`${req.protocol}//${req.host}/${locale.code}/${collectionConfig?.slug}/${id}`);
+        return `${req.protocol}//${req.host}/${locale.code}/${collectionConfig?.slug}/${id}`;
+      },
+      collections: ["developers", "projects"],
+    },
+  },
   // Define and configure your collections in this array
   collections: [Developer as any, Project as any, Media],
   telemetry: false,
@@ -37,15 +46,15 @@ export default buildConfig({
       collections: {
         media: true,
       },
-      bucket: process.env.R2_BUCKET || '',
+      bucket: process.env.R2_BUCKET || "",
       config: {
         credentials: {
-          accessKeyId: process.env.R2_ACCESS_KEY_ID || '',
-          secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || '',
+          accessKeyId: process.env.R2_ACCESS_KEY_ID || "",
+          secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || "",
         },
-        region: 'auto',
-        endpoint: process.env.R2_ENDPOINT || '',
-      }
-    }), 
-  ]
+        region: "auto",
+        endpoint: process.env.R2_ENDPOINT || "",
+      },
+    }),
+  ],
 });

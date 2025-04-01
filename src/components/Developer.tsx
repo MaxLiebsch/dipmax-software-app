@@ -22,8 +22,8 @@ const DeveloperComponent = ({ developer }: { developer: Developer }) => {
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
-        <div className="container py-8 md:py-12 mx-auto max-w-7xl">
-          <Button asChild variant="ghost" className="mb-6">
+        <div className="container py-8 md:py-12 px-4 md:px-6 mx-auto max-w-7xl">
+          <Button asChild variant="ghost" className="mb-6 -ml-4">
             <Link href="/#team">
               <ArrowLeft className="mr-2 h-4 w-4" />
               {t("back")}
