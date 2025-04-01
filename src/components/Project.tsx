@@ -32,7 +32,7 @@ const ProjectComponent = ({ project }: { project: Project }) => {
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
-        <div className="container py-8 md:py-12">
+        <div className="container py-8 md:py-12 mx-auto max-w-7xl">
           <Button asChild variant="ghost" className="mb-6">
             <Link href="/#projects">
               <ArrowLeft className="mr-2 h-4 w-4" />

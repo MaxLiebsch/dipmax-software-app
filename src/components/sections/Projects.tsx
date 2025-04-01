@@ -11,7 +11,7 @@ const Projects = ({projects}: {projects: ProjectWrapper}) => {
   const web = projects.docs.filter((project: any) => project.type === "web");
   return (
     <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <Badge className="mb-2">{t("badge")}</Badge>

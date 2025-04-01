@@ -22,7 +22,7 @@ const DeveloperComponent = ({ developer }: { developer: Developer }) => {
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
-        <div className="container py-8 md:py-12">
+        <div className="container py-8 md:py-12 mx-auto max-w-7xl">
           <Button asChild variant="ghost" className="mb-6">
             <Link href="/#team">
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -202,7 +202,7 @@ const DeveloperComponent = ({ developer }: { developer: Developer }) => {
                               <div className="aspect-video w-full overflow-hidden">
                                 <Image
                                   src={
-                                    project.images.length
+                                    project.images?.length
                                       ? project.images[0].image.url
                                       : "/placeholder.svg"
                                   }

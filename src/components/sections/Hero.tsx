@@ -9,7 +9,7 @@ const Hero = () => {
   const t = useTranslations("hero");
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto max-w-7xl">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
