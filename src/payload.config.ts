@@ -4,6 +4,7 @@ import { s3Storage } from "@payloadcms/storage-s3";
 import { buildConfig } from "payload";
 import sharp from "sharp";
 import { Developer } from "./payload/collections/developer";
+import { Locale } from "./payload/collections/locale";
 import { Media } from "./payload/collections/media";
 import { Project } from "./payload/collections/project";
 
@@ -21,7 +22,7 @@ export default buildConfig({
     },
   },
   // Define and configure your collections in this array
-  collections: [Developer as any, Project as any, Media],
+  collections: [Developer as any, Project as any, Media, Locale],
   telemetry: false,
   localization: {
     locales: ["de", "en"], // required
