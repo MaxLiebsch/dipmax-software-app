@@ -8,15 +8,28 @@ import { Locale } from "./payload/collections/locale";
 import { Media } from "./payload/collections/media";
 import { Project } from "./payload/collections/project";
 
+const {
+  NODE_ENV,
+  PAYLOAD_SECRET,
+  DATABASE_URI,
+  R2_BUCKET,
+  R2_ACCESS_KEY_ID,
+  R2_SECRET_ACCESS_KEY,
+  R2_ENDPOINT,
+} = process.env;
+
 export default buildConfig({
   // If you'd like to use Rich Text, pass your editor here
   editor: lexicalEditor(),
   admin: {
     livePreview: {
       url: ({ data, req, collectionConfig, locale }) => {
-        const id = collectionConfig?.slug === "developers" ? data.slug : data.id;
-        console.log(`${req.protocol}//${req.host}/${locale.code}/${collectionConfig?.slug}/${id}`);
-        return `${req.protocol}//${req.host}/${locale.code}/${collectionConfig?.slug}/${id}`;
+        const id =
+          collectionConfig?.slug === "developers" ? data.slug : data.id;
+        console.log(
+          `${req.protocol}//${req.host}/${locale.code}/${collectionConfig?.slug}/${id}`
+        );
+        return `${NODE_ENV === "development" ? "http" : "https"}://${req.host}/${locale.code}/${collectionConfig?.slug}/${id}`;
       },
       collections: ["developers", "projects"],
     },
@@ -30,12 +43,11 @@ export default buildConfig({
   },
   cors: "*",
   // Your Payload secret - should be a complex and secure string, unguessable
-  secret: process.env.PAYLOAD_SECRET || "secret",
+  secret: PAYLOAD_SECRET || "secret",
   // Whichever Database Adapter you're using should go here
   // Mongoose is shown as an example, but you can also use Postgres
   db: mongooseAdapter({
-    url:
-      process.env.DATABASE_URI || "mongodb://localhost:27017/dipmax-software",
+    url: DATABASE_URI || "mongodb://localhost:27017/dipmax-software",
   }),
   // If you want to resize images, crop, set focal point, etc.
   // make sure to install it and pass it to the config.
@@ -47,14 +59,14 @@ export default buildConfig({
       collections: {
         media: true,
       },
-      bucket: process.env.R2_BUCKET || "",
+      bucket: R2_BUCKET || "",
       config: {
         credentials: {
-          accessKeyId: process.env.R2_ACCESS_KEY_ID || "",
-          secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || "",
+          accessKeyId: R2_ACCESS_KEY_ID || "",
+          secretAccessKey: R2_SECRET_ACCESS_KEY || "",
         },
         region: "auto",
-        endpoint: process.env.R2_ENDPOINT || "",
+        endpoint: R2_ENDPOINT || "",
       },
     }),
   ],
