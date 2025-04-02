@@ -20,6 +20,7 @@ export default async function DeveloperProfile({
     collection: "developers",
     fallbackLocale: "en",
     locale: locale,
+    depth: 1,
     where: {
       slug: {
         equals: _params.slug,

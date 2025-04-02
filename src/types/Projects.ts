@@ -35,6 +35,7 @@ export interface Project {
   
   export interface Team {
     developer: Developer
+    role: string
     id: string
   }
   

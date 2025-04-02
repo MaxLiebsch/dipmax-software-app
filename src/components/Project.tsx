@@ -239,15 +239,15 @@ const ProjectComponent = ({ project }: { project: Project }) => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    {project.team.map(({ developer }) => (
+                    {project.team.map(({ developer, role }) => (
                       <Link
                         key={developer.id}
-                        href={`/developers/${developer.id}`}
+                        href={`/developers/${developer.slug}`}
                       >
                         <div className="flex items-center gap-4 rounded-lg p-2 transition-colors hover:bg-muted">
                           <div className="relative h-12 w-12 overflow-hidden rounded-full">
                             <Image
-                              src={developer.image.url || "/placeholder.svg"}
+                              src={developer?.image.url || "/placeholder.svg"}
                               alt={developer.name}
                               fill
                               className="object-cover"
@@ -255,9 +255,11 @@ const ProjectComponent = ({ project }: { project: Project }) => {
                           </div>
                           <div>
                             <h3 className="font-medium">{developer.name}</h3>
-                            <p className="text-sm text-muted-foreground">
-                              {developer.role}
-                            </p>
+                            {role && (
+                              <p className="text-sm text-muted-foreground">
+                                {role}
+                              </p>
+                            )}
                           </div>
                         </div>
                       </Link>

@@ -37,6 +37,9 @@ export const Developer = {
       type: "upload",
       label: "Image",
       relationTo: "media", // Assuming you have a media collection
+      admin: {
+        useAsTitle: "alt"
+      }
     },
     {
       name: "bio",
@@ -151,6 +154,9 @@ export const Developer = {
           relationTo: "projects",
           hasMany: true,
           label: "Project",
+          admin: {
+            useAsTitle: "title"
+          }
         },
       ],
     },

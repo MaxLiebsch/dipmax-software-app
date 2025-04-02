@@ -221,7 +221,7 @@ const DeveloperComponent = ({ developer }: { developer: Developer }) => {
                                 </p>
                                 {project.tags && (
                                   <div className="mt-4 flex flex-wrap gap-2">
-                                    {project.tags.map((tag) => (
+                                    {project.tags.map(({tag, id}) => (
                                       <Badge key={tag} variant="secondary">
                                         {tag}
                                       </Badge>

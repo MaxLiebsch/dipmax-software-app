@@ -19,6 +19,7 @@ export default async function ProjectDetail({
     collection: "projects",
     fallbackLocale: "en",
     locale: locale,
+    depth: 1,
     where: {
       id: {
         equals: _params.id,

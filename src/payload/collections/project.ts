@@ -92,6 +92,9 @@ export const Project = {
           type: "upload",
           label: "Image",
           relationTo: "media",
+          admin: {
+            useAsTitle: "alt"
+          }
         },
       ],
     },
@@ -114,6 +117,9 @@ export const Project = {
           type: "relationship",
           relationTo: "developers",
           label: "Developer",
+          admin: {
+            useAsTitle: "name"
+          }
         },
         {
           name: "role",
