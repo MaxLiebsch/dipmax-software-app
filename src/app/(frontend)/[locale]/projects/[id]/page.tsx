@@ -19,13 +19,14 @@ export default async function ProjectDetail({
     collection: "projects",
     fallbackLocale: "en",
     locale: locale,
-    depth: 1,
+    depth: 4,
     where: {
       id: {
         equals: _params.id,
       },
     },
   })) as ProjectWrapper;
+  console.log('project:', project)
 
   const t = await getTranslations("projects.project");
 

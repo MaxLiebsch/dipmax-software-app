@@ -3,6 +3,9 @@ export const Developer = {
   access: {
     read: () => true, // Allow read access to everyone
   },
+  admin: {
+    useAsTitle: "name",
+  },
   fields: [
     {
       name: "active",

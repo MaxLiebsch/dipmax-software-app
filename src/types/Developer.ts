@@ -16,11 +16,23 @@ import { Project } from "./Projects"
     skills: any[]
     experience: any[]
     education: any[]
-    projects: {project: Project, id: string}[]
+    projects: {project: Project[], id: string}[]
     active: boolean
     id: string
   }
   
+  export interface ImageSize {
+    width: number
+    height: number
+    mimeType: string
+    filesize: number
+    filename: string
+    url: string
+  }
+  export interface ImageSizes {
+    thumbnail: ImageSize
+    card: ImageSize
+  }
   export interface Image {
     createdAt: string
     updatedAt: string
@@ -34,6 +46,7 @@ import { Project } from "./Projects"
     focalY: number
     id: string
     url: string
+    sizes: ImageSizes
     thumbnailURL: any
   }
 

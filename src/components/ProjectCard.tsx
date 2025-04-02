@@ -9,11 +9,12 @@ import { Card, CardContent, CardFooter } from "./ui/card";
 export default function ProjectCard({project}: {project: Project}) {
   const t = useTranslations("projects");
   const {title, description, images, tags} = project;
+  console.log('project:', project)
   return (
     <Card className="overflow-hidden">
       <div className="aspect-video w-full overflow-hidden">
         <Image
-          src={images?.length > 0 ? images[0].image.url : "/placeholder.svg"}
+          src={images?.length > 0 ? images[0].image.sizes.thumbnail.url : "/placeholder.svg"}
           alt={title}
           width={400}
           height={300}

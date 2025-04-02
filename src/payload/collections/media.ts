@@ -6,6 +6,9 @@ export const Media = {
   access: {
     read: () => true, // Allow read access to everyone
   },
+  admin: {
+    useAsTitle: "alt",
+  },
   upload: {
     staticDir: path.resolve(path.dirname(""), "media"),
     mimeTypes: ["image/*"],

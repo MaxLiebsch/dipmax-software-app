@@ -3,6 +3,9 @@ export const Project = {
   access: {
     read: () => true, // Allow read access to everyone
   },
+  admin: {
+    useAsTitle: "title",
+  },
   fields: [
     {
       name: "slug",
