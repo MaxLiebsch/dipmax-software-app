@@ -24,7 +24,7 @@ export default function ProjectCard({project}: {project: Project}) {
         <h3 className="text-xl font-bold">{title}</h3>
         <p className="mt-2 text-muted-foreground">{description}</p>
         <div className="mt-4 flex flex-wrap gap-2">
-          {tags.slice(0, 3).map(({tag, id}) => (
+          {tags.slice(0, 4).map(({tag, id}) => (
             <Badge key={id} variant="secondary">
               {tag}
             </Badge>
