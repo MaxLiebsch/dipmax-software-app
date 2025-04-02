@@ -20,7 +20,12 @@ export interface Project {
     testimonial: Testimonial
     description: string
     id: string
-    tags: any[]
+    tags: Tags[]
+  }
+  
+  export interface Tags {
+    tag: string
+    id: string
   }
 
   export interface Techno {

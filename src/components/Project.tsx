@@ -60,9 +60,9 @@ const ProjectComponent = ({ project }: { project: Project }) => {
                 </div>}
 
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {project.technologies.map(({technology, id}) => (
+                  {project.tags.map(({tag, id}) => (
                     <Badge key={id} variant="secondary">
-                      {technology}
+                      {tag}
                     </Badge>
                   ))}
                 </div>

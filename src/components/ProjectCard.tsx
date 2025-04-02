@@ -8,12 +8,12 @@ import { Card, CardContent, CardFooter } from "./ui/card";
 
 export default function ProjectCard({project}: {project: Project}) {
   const t = useTranslations("projects");
-  const {title, description, images, technologies, team} = project;
+  const {title, description, images, tags} = project;
   return (
     <Card className="overflow-hidden">
       <div className="aspect-video w-full overflow-hidden">
         <Image
-          src={images.length > 0 ? images[0].image.url : "/placeholder.svg"}
+          src={images?.length > 0 ? images[0].image.url : "/placeholder.svg"}
           alt={title}
           width={400}
           height={300}
@@ -24,9 +24,9 @@ export default function ProjectCard({project}: {project: Project}) {
         <h3 className="text-xl font-bold">{title}</h3>
         <p className="mt-2 text-muted-foreground">{description}</p>
         <div className="mt-4 flex flex-wrap gap-2">
-          {technologies.map(({technology, id}) => (
+          {tags.slice(0, 3).map(({tag, id}) => (
             <Badge key={id} variant="secondary">
-              {technology}
+              {tag}
             </Badge>
           ))}
         </div>
