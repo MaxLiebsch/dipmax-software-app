@@ -54,13 +54,18 @@ const ProjectComponent = ({ project }: { project: Project }) => {
 
               <div className="mt-8">
                 <h1 className="text-3xl font-bold">{project.title}</h1>
-                {project.completionDate && <div className="mt-2 flex items-center text-muted-foreground">
-                  <Calendar className="mr-2 h-4 w-4" />
-                  <span>Completed: {new Date(project.completionDate).toLocaleDateString()}</span>
-                </div>}
+                {project.completionDate && (
+                  <div className="mt-2 flex items-center text-muted-foreground">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    <span>
+                      Completed:{" "}
+                      {new Date(project.completionDate).toLocaleDateString()}
+                    </span>
+                  </div>
+                )}
 
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tags.map(({tag, id}) => (
+                  {project.tags.map(({ tag, id }) => (
                     <Badge key={id} variant="secondary">
                       {tag}
                     </Badge>
@@ -104,9 +109,16 @@ const ProjectComponent = ({ project }: { project: Project }) => {
                         </CardHeader>
                         <CardContent>
                           <div className="space-y-4">
-                            <p className="text-muted-foreground whitespace-pre-line">
-                              {project.longDescription}
-                            </p>
+                            {project.description && (
+                              <p className="text-muted-foreground whitespace-pre-line">
+                                {project.description}
+                              </p>
+                            )}
+                            {project.longDescription && (
+                              <p className="text-muted-foreground whitespace-pre-line">
+                                {project.longDescription}
+                              </p>
+                            )}
 
                             {Object.keys(project.testimonial).length > 0 && (
                               <div className="mt-8 rounded-lg bg-muted p-6">
@@ -137,7 +149,7 @@ const ProjectComponent = ({ project }: { project: Project }) => {
                         </CardHeader>
                         <CardContent>
                           <ul className="grid gap-3 sm:grid-cols-2">
-                            {project.features.map(({feature, id}) => (
+                            {project.features.map(({ feature, id }) => (
                               <li key={id} className="flex items-start">
                                 <Check className="mr-2 h-5 w-5 text-primary" />
                                 <span>{feature}</span>
@@ -259,13 +271,13 @@ const ProjectComponent = ({ project }: { project: Project }) => {
                   <CardHeader>
                     <CardTitle>{t("technologies-title")}</CardTitle>
                   </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map(({technology, id}) => (
-                      <Badge key={id} variant="outline">
-                        {technology}
-                      </Badge>
-                    ))}
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map(({ technology, id }) => (
+                        <Badge key={id} variant="outline">
+                          {technology}
+                        </Badge>
+                      ))}
                     </div>
                   </CardContent>
                 </Card>
